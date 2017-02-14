@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.redmann</groupId>
-    <artifactId>teacher.multitool</artifactId>
+    <artifactId>multitool</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
