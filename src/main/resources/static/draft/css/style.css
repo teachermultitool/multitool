@@ -1,5 +1,70 @@
-body {
-  padding-bottom: 20px;
-  background: #333;
-  color: #666;
+header {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    background-image: -webkit-linear-gradient(#93c54b, #73b319 35%, #93c54b);
+    background-image: linear-gradient(#93c54b, #73b319 35%, #93c54b);
+    min-height: 100px;
+    max-height: 100px;
+    width: 100%;
+    padding-top: 25px;
+    border-bottom: solid #ffffff 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    float: left;
+  }
+  .navbar {
+    position: static !important;
+  }
+  .spiral-container {
+    position: relative;
+  }
+  .spiral {
+    z-index: 2;
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  .highlight {
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-animation: fade 60s linear;
+            animation: fade 60s linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes fade {
+    0%,
+    5%,
+    100% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    0%,
+    5%,
+    100% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 1;
+    }
+  }
+}
+.navbar {
+  border-radius: 0 !important;
 }

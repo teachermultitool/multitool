@@ -1,5 +1,57 @@
-body {
-  padding-bottom: 20px;
-  background: #333;
-  color: #666;
+@primary-color: #93c54b;
+@secondary-color: #ffffff;
+
+header {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    //display: block;
+    background-image: linear-gradient(@primary-color, #73b319 35%, @primary-color);
+    min-height: 100px;
+    max-height: 100px;
+    width: 100%;
+    padding-top: 25px;
+    border-bottom: solid @secondary-color 2px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    float: left;
+  }
+
+  .navbar {
+    position: static !important;
+  }
+
+  .spiral-container {
+    position: relative;
+  }
+
+  .spiral {
+    z-index: 2;
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .highlight {
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    animation: fade 60s linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fade {
+    0%,5%,100% { opacity: 0 }
+    2% { opacity: 1 }
+  }
+}
+
+.navbar {
+  //display: none;
+  border-radius: 0 !important;
 }
