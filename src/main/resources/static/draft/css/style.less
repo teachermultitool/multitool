@@ -1,5 +1,6 @@
 @primary-color: #93c54b;
 @secondary-color: #ffffff;
+@header-hight: 100px;
 
 header {
   display: none;
@@ -7,10 +8,9 @@ header {
 
 @media only screen and (min-width: 768px) {
   header {
-    //display: block;
     background-image: linear-gradient(@primary-color, #73b319 35%, @primary-color);
-    min-height: 100px;
-    max-height: 100px;
+    min-height: @header-hight;
+    max-height: @header-hight;
     width: 100%;
     padding-top: 25px;
     border-bottom: solid @secondary-color 2px;
@@ -22,6 +22,19 @@ header {
 
   .navbar {
     position: static !important;
+  }
+
+  .logo-header {
+    flex: 1;
+    min-height: @header-hight;
+    max-height: @header-hight;
+  }
+
+  .logo-header-img {
+    min-height: calc(@header-hight - 10px);
+    max-height: calc(@header-hight - 10px);
+    width: 192px;
+    margin-top: 5px;
   }
 
   .spiral-container {
@@ -46,8 +59,12 @@ header {
   }
 
   @keyframes fade {
-    0%,5%,100% { opacity: 0 }
-    2% { opacity: 1 }
+    0%, 5%, 100% {
+      opacity: 0
+    }
+    2% {
+      opacity: 1
+    }
   }
 }
 
